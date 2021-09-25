@@ -70,12 +70,13 @@ func NewClient(opts *ClientOptions) Client {
 		Secret:    opts.Secret,
 		IsSandbox: opts.IsSandbox,
 		Version:   opts.Version,
+
 	}
 }
 
 // Client 定義了一個蝦皮的客戶端該有什麼功能。
 type Client interface {
-	// SetAccessToken(t string) *ShopeeClient
+	SetAccessToken(t string) *ShopeeClient
 
 	//=======================================================
 	// Shop
