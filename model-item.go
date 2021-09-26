@@ -64,7 +64,7 @@ type AddRequest struct {
 	// Should call shopee.logistics.GetLogistics to get logistics first. Should contain all all logistics.
 	Logistics []AddRequestLogistic `json:"logistics,omitempty"`
 	// the net weight of this item, the unit is KG.
-	Weight float64 `json:"weight,omitempty,string"`
+	Weight float64 `json:"weight,omitempty"`
 	// The length of package for this single item, the unit is CM
 	PackageLength int `json:"package_length,omitempty"`
 	// The width of package for this single item, the unit is CM
@@ -266,7 +266,7 @@ type UpdateItemRequest struct {
 	// Should call shopee.logistics.GetLogistics to get logistics first. Should contain all all logistics.
 	Logistics []UpdateItemRequestLogistic `json:"logistics,omitempty"`
 	// the net weight of this item, the unit is KG.
-	Weight float64 `json:"weight,omitempty,string"`
+	Weight float64 `json:"weight,omitempty"`
 	// The length of package for this single item, the unit is CM
 	PackageLength int `json:"package_length,omitempty"`
 	// The width of package for this single item, the unit is CM

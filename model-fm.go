@@ -64,15 +64,15 @@ type FirstMileCodeBindOrderRequest struct {
 	// The identity of logistic channel
 	LogisticID int64 `json:"logistic_id,omitempty"`
 	// The volume of the parcel.
-	Volume float64 `json:"volume,omitempty,string"`
+	Volume float64 `json:"volume,omitempty"`
 	// The weight of the parcel.
-	Weight float64 `json:"weight,omitempty,string"`
+	Weight float64 `json:"weight,omitempty"`
 	// The width of the parcel.
-	Width float64 `json:"width,omitempty,string"`
+	Width float64 `json:"width,omitempty"`
 	// The length of the parcel.
-	Length float64 `json:"length,omitempty,string"`
+	Length float64 `json:"length,omitempty"`
 	// The height of the parcel.
-	Height float64 `json:"height,omitempty,string"`
+	Height float64 `json:"height,omitempty"`
 	// Use this field to specify the region you want to ship parcel.
 	Area string `json:"area,omitempty"`
 }

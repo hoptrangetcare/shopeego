@@ -145,7 +145,7 @@ type AddRequestLogistic struct {
 	// related to shopee.logistics.GetLogistics result.logistics.enabled only affect current item
 	Enabled bool `json:"enabled,omitempty"`
 	// Only needed when logistics fee_type = CUSTOM_PRICE.
-	ShippingFee float64 `json:"shipping_fee,omitempty,string"`
+	ShippingFee float64 `json:"shipping_fee,omitempty"`
 	// If specify logistic fee_type is SIZE_SELECTION size_id is required
 	SizeID int64 `json:"size_id,omitempty"`
 	// when seller chooses this option, the shipping fee of this channel on item will be set to 0. Default value is False.
@@ -200,13 +200,13 @@ type AddResponseItemLogistic struct {
 	// related to shopee.logistics.GetLogistics result.logistics.enabled only affect current item
 	Enabled bool `json:"enabled,omitempty"`
 	// Only needed when logistics fee_type = CUSTOM_PRICE.
-	ShippingFee float64 `json:"shipping_fee,omitempty,string"`
+	ShippingFee float64 `json:"shipping_fee,omitempty"`
 	// If specify logistic fee_type is SIZE_SELECTION size_id is required.
 	SizeID int64 `json:"size_id,omitempty"`
 	// when seller chooses this option, the shipping fee of this channel on item will be set to 0. Default value is False.
 	IsFree bool `json:"is_free,omitempty"`
 	// Estimated shipping fee calculated by weight. Don't exist if channel is no-integrated.
-	EstimatedShippingFee float64 `json:"estimated_shipping_fee,omitempty,string"`
+	EstimatedShippingFee float64 `json:"estimated_shipping_fee,omitempty"`
 }
 
 type AddResponseItemWholesale struct {
@@ -244,7 +244,7 @@ type AddResponseItem struct {
 	// Timestamp that indicates the last time that there was a change in value of the item, such as price/stock change.
 	UpdateTime int `json:"update_time,omitempty"`
 	// the net weight of this item, the unit is KG.
-	Weight float64 `json:"weight,omitempty,string"`
+	Weight float64 `json:"weight,omitempty"`
 	// Could call shopee.item.GetCategories to get category detail.Related to result.categories.category_id.
 	CategoryID int64 `json:"category_id,omitempty"`
 	// The original price of the item in the listing currency.
@@ -272,7 +272,7 @@ type AddResponseItem struct {
 	// The guaranteed days to ship orders. For pre-order, please input value from 7 to 30; for non pre-order, please exclude this field and it will default to the respective standard per your shop location.(e.g. 3 for CrossBorder)
 	DaysToShip int `json:"days_to_ship,omitempty"`
 	// The rating star scores of this item.
-	RatingStar float64 `json:"rating_star,omitempty,string"`
+	RatingStar float64 `json:"rating_star,omitempty"`
 	// Count of comments for the item.
 	CMTCount int `json:"cmt_count,omitempty"`
 	// This indicates whether the item is secondhand.
@@ -440,13 +440,13 @@ type GetItemDetailResponseItemLogistic struct {
 	// related to shopee.logistics.GetLogistics result.logistics.enabled only affect current item
 	Enabled bool `json:"enabled,omitempty"`
 	// Only needed when logistics fee_type = CUSTOM_PRICE.
-	ShippingFee float64 `json:"shipping_fee,omitempty,string"`
+	ShippingFee float64 `json:"shipping_fee,omitempty"`
 	// If specify logistic fee_type is SIZE_SELECTION size_id is required
 	SizeID int64 `json:"size_id,omitempty"`
 	// when seller chooses this option, the shipping fee of this channel on item will be set to 0. Default value is False.
 	IsFree bool `json:"is_free,omitempty"`
 	// Estimated shipping fee calculated by weight. Don't exist if channel is no-integrated.
-	EstimatedShippingFee float64 `json:"estimated_shipping_fee,omitempty,string"`
+	EstimatedShippingFee float64 `json:"estimated_shipping_fee,omitempty"`
 }
 
 type GetItemDetailResponseItemWholesale struct {
@@ -486,7 +486,7 @@ type GetItemDetailResponseItem struct {
 	// Timestamp that indicates the last time that there was a change in value of the item, such as price/stock change.
 	UpdateTime int `json:"update_time,omitempty"`
 	// the net weight of this item, the unit is KG.
-	Weight float64 `json:"weight,omitempty,string"`
+	Weight float64 `json:"weight,omitempty"`
 	// Could call shopee.item.GetCategories to get category detail.Related to result.categories.category_id
 	CategoryID int64 `json:"category_id,omitempty"`
 	// The original price of the item in the listing currency.
@@ -500,7 +500,7 @@ type GetItemDetailResponseItem struct {
 	// The wholesales tier list.
 	Wholesales []GetItemDetailResponseItemWholesale `json:"wholesales,omitempty"`
 	// The rating star scores of this item.
-	RatingStar float64 `json:"rating_star,omitempty,string"`
+	RatingStar float64 `json:"rating_star,omitempty"`
 	// Count of comments for the item.
 	CMTCount int `json:"cmt_count,omitempty"`
 	// The sales volume of item.
@@ -510,11 +510,11 @@ type GetItemDetailResponseItem struct {
 	// The conllection number of item.
 	Likes int `json:"likes,omitempty"`
 	// The length of package for this single item, the unit is CM
-	PackageLength float64 `json:"package_length,omitempty,string"`
+	PackageLength float64 `json:"package_length,omitempty"`
 	// The width of package for this single item, the unit is CM
-	PackageWidth float64 `json:"package_width,omitempty,string"`
+	PackageWidth float64 `json:"package_width,omitempty"`
 	// The height of package for this single item, the unit is CM
-	PackageHeight float64 `json:"package_height,omitempty,string"`
+	PackageHeight float64 `json:"package_height,omitempty"`
 	// The days to ship.
 	DaysToShip int `json:"days_to_ship,omitempty"`
 	// url of size chart image. Only particular categories support it.
@@ -568,7 +568,7 @@ type UpdateItemRequestLogistic struct {
 	// related to shopee.logistics.GetLogistics result.logistics.enabled only affect current item
 	Enabled bool `json:"enabled,omitempty"`
 	// Only needed when logistics fee_type = CUSTOM_PRICE.
-	ShippingFee float64 `json:"shipping_fee,omitempty,string"`
+	ShippingFee float64 `json:"shipping_fee,omitempty"`
 	// If specify logistic fee_type is SIZE_SELECTION size_id is required
 	SizeID int64 `json:"size_id,omitempty"`
 	// when seller chooses this option, the shipping fee of this channel on item will be set to 0. Default value is False.
@@ -597,7 +597,7 @@ type UpdateItemResponseItemVariation struct {
 	// Timestamp that indicates the last time that there was a change in value of the variation, such as price/stock change.
 	UpdateTime int `json:"update_time,omitempty"`
 	// The original price of the variation in the listing currency.
-	OriginalPirce float64 `json:"original_pirce,omitempty,string"`
+	OriginalPirce float64 `json:"original_pirce,omitempty"`
 	// The ID of discount activity the variation is currently in. One variation can only have one discount at a time. discount_id will be 0 if the variation has no discount applied.
 	DiscountID int64 `json:"discount_id,omitempty"`
 }
@@ -623,13 +623,13 @@ type UpdateItemResponseItemLogistic struct {
 	// related to shopee.logistics.GetLogistics result.logistics.enabled only affect current item
 	Enabled bool `json:"enabled,omitempty"`
 	// Only needed when logistics fee_type = CUSTOM_PRICE.
-	ShippingFee float64 `json:"shipping_fee,omitempty,string"`
+	ShippingFee float64 `json:"shipping_fee,omitempty"`
 	// If specify logistic fee_type is SIZE_SELECTION size_id is required
 	SizeID int64 `json:"size_id,omitempty"`
 	// when seller chooses this option, the shipping fee of this channel on item will be set to 0. Default value is False.
 	IsFree bool `json:"is_free,omitempty"`
 	// Estimated shipping fee calculated by weight. Don't exist if channel is no-integrated.
-	EstimatedShippingFee float64 `json:"estimated_shipping_fee,omitempty,string"`
+	EstimatedShippingFee float64 `json:"estimated_shipping_fee,omitempty"`
 }
 
 type UpdateItemResponseItemWholesale struct {
@@ -667,7 +667,7 @@ type UpdateItemResponseItem struct {
 	// Timestamp that indicates the last time that there was a change in value of the item, such as price/stock change.
 	UpdateTime int `json:"update_time,omitempty"`
 	// the net weight of this item, the unit is KG.
-	Weight float64 `json:"weight,omitempty,string"`
+	Weight float64 `json:"weight,omitempty"`
 	// Could call shopee.item.GetCategories to get category detail.Related to result.categories.category_id
 	CategoryID int64 `json:"category_id,omitempty"`
 	// The original price of the item in the listing currency.
@@ -681,7 +681,7 @@ type UpdateItemResponseItem struct {
 	// The wholesales tier list.
 	Wholesales []UpdateItemResponseItemWholesale `json:"wholesales,omitempty"`
 	// The rating star scores of this item.
-	RatingStar float64 `json:"rating_star,omitempty,string"`
+	RatingStar float64 `json:"rating_star,omitempty"`
 	// Count of comments for the item.
 	CMTCount int `json:"cmt_count,omitempty"`
 	// The sales volume of item.
@@ -1309,13 +1309,13 @@ type GetOrderDetailsResponseOrder struct {
 	// This object contains detailed breakdown for the recipient address.
 	RecipientAddress GetOrderDetailsResponseOrderAddress `json:"recipient_address,omitempty"`
 	// The estimated shipping fee is an estimation calculated by Shopee based on specific logistics courier's standard.
-	EstimatedShippingFee float64 `json:"estimated_shipping_fee,omitempty,string"`
+	EstimatedShippingFee float64 `json:"estimated_shipping_fee,omitempty"`
 	// The actual shipping cost of the order if available from external logistics partners.
-	ActualShippingCost float64 `json:"actual_shipping_cost,omitempty,string"`
+	ActualShippingCost float64 `json:"actual_shipping_cost,omitempty"`
 	// The total amount paid by the buyer for the order. This amount includes the total sale price of items, shipping cost beared by buyer; and offset by Shopee promotions if applicable. This value will only return after the buyer has completed payment for the order.
-	TotalAmount float64 `json:"total_amount,omitempty,string"`
+	TotalAmount float64 `json:"total_amount,omitempty"`
 	// The total amount that the seller is expected to receive for the order. This amount includes buyer paid order amount (total_amount), all forms of Shopee platform subsidy; and offset by any cost and commission incurred.
-	EscrowAmount float64 `json:"escrow_amount,omitempty,string"`
+	EscrowAmount float64 `json:"escrow_amount,omitempty"`
 	// Enumerated type that defines the current status of the order.
 	OrderStatus string `json:"order_status,omitempty"`
 	// The logistics service provider that the buyer selected for the order to deliver items.
@@ -1360,7 +1360,7 @@ type GetOrderDetailsResponseOrder struct {
 	// Use this field to get reason for buyer, seller, and system cancellation.
 	CancelReason string `json:"cancel_reason,omitempty"`
 	// Cross-border tax imposed by the Indonesian government on sellers.
-	EscrowTax float64 `json:"escrow_tax,omitempty,string"`
+	EscrowTax float64 `json:"escrow_tax,omitempty"`
 	// Use this filed to judge whether the actual_shipping_fee is confirmed.
 	IsActualShippingFeeConfirmed bool `json:"is_actual_shipping_fee_confirmed,omitempty"`
 	// Buyer's CPF number for taxation and invoice purposes. Only for Brazil order.
@@ -1379,51 +1379,51 @@ type GetEscrowDetailsResponseOrderIncomeDetail struct {
 	// The three-digit code representing the currency unit used for all transactional amount under
 	LocalCurrency string `json:"local_currency,omitempty"`
 	// The total amount paid by the buyer for the order. This amount includes the total sale price of items, shipping cost beared by buyer; and offset by Shopee promotions if applicable.
-	TotalAmount float64 `json:"total_amount,omitempty,string"`
+	TotalAmount float64 `json:"total_amount,omitempty"`
 	// Final value of coins used by seller for the order.
-	Coin float64 `json:"coin,omitempty,string"`
+	Coin float64 `json:"coin,omitempty"`
 	// Final value of voucher provided by Shopee for the order.
-	Voucher float64 `json:"voucher,omitempty,string"`
+	Voucher float64 `json:"voucher,omitempty"`
 	// Final value of voucher provided by Seller for the order.
-	VoucherSeller float64 `json:"voucher_seller,omitempty,string"`
+	VoucherSeller float64 `json:"voucher_seller,omitempty"`
 	// Final sum of each item Shopee discount of a specific order. This amount will rebate to seller.
-	SellerRebate float64 `json:"seller_rebate,omitempty,string"`
+	SellerRebate float64 `json:"seller_rebate,omitempty"`
 	// The final shipping cost of order . For Non-integrated logistics channel is 0.
-	ActualShippingCost float64 `json:"actual_shipping_cost,omitempty,string"`
+	ActualShippingCost float64 `json:"actual_shipping_cost,omitempty"`
 	// The platform shipping subsidy to the seller
-	ShippingFeeRebate float64 `json:"shipping_fee_rebate,omitempty,string"`
+	ShippingFeeRebate float64 `json:"shipping_fee_rebate,omitempty"`
 	// The commission fee charged by Shopee platform if applicable.
-	CommissionFee float64 `json:"commission_fee,omitempty,string"`
+	CommissionFee float64 `json:"commission_fee,omitempty"`
 	// The voucher code or promotion code the buyer used.
-	VoucherCode float64 `json:"voucher_code,omitempty,string"`
+	VoucherCode float64 `json:"voucher_code,omitempty"`
 	// The voucher name or promotion name the buyer used.
-	VoucherName float64 `json:"voucher_name,omitempty,string"`
+	VoucherName float64 `json:"voucher_name,omitempty"`
 	// The total amount that the seller is expected to receive for the order and will change before order completed. escrow_amount=total_amount+voucher+credit_card_promotion+seller_rebate+coin-commission_fee-credit_card_transaction_fee-cross_border_tax-service_fee-buyer_shopee_kredit-seller_coin_cash_back+final_shipping_fee-seller_return_refund_amount.
-	EscrowAmount float64 `json:"escrow_amount,omitempty,string"`
+	EscrowAmount float64 `json:"escrow_amount,omitempty"`
 	// Amount incurred by Buyer for purchasing items outside of home country. Amount may change after Return Refund.
-	CroossBorderTax float64 `json:"crooss_border_tax,omitempty,string"`
+	CroossBorderTax float64 `json:"crooss_border_tax,omitempty"`
 	// Include buyer transaction fee and seller transaction fee.
-	CreditCardTransactionFee float64 `json:"credit_card_transaction_fee,omitempty,string"`
+	CreditCardTransactionFee float64 `json:"credit_card_transaction_fee,omitempty"`
 	// Amount charged by Shopee to seller for additional services.
-	ServiceFee float64 `json:"service_fee,omitempty,string"`
+	ServiceFee float64 `json:"service_fee,omitempty"`
 	// Amount charged by Shopee to Buyer for using ShopeeKredit for the order. Currently only applicable in ID.
-	BuyerShopeeKredit float64 `json:"buyer_shopee_kredit,omitempty,string"`
+	BuyerShopeeKredit float64 `json:"buyer_shopee_kredit,omitempty"`
 	// Value of coins provided by Seller for purchasing with his or her store for the order.
-	SellerCoinCashBack float64 `json:"seller_coin_cash_back,omitempty,string"`
+	SellerCoinCashBack float64 `json:"seller_coin_cash_back,omitempty"`
 	// Final adjusted amount that seller has to bear as part of escrow. This amount could be negative or positive.
-	FinalShippingFee float64 `json:"final_shipping_fee,omitempty,string"`
+	FinalShippingFee float64 `json:"final_shipping_fee,omitempty"`
 	// Amount returned to Seller in the event of partial return.
-	SellerReturnRefundAmount float64 `json:"seller_return_refund_amount,omitempty,string"`
+	SellerReturnRefundAmount float64 `json:"seller_return_refund_amount,omitempty"`
 	// The amount offset via payment promotion. May include bank payment promotion and Shopee payment promotion.
-	CreditCardPromotion float64 `json:"credit_card_promotion,omitempty,string"`
+	CreditCardPromotion float64 `json:"credit_card_promotion,omitempty"`
 	// True means incoming won't change any more.
 	IsCompleted bool `json:"is_completed,omitempty"`
 	// Use this field to fetch the list of voucher codes.
 	VoucherCodeList []string `json:"voucher_code_list,omitempty"`
 	// The transaction_fee of seller.
-	SellerTransactionFee float64 `json:"seller_transaction_fee,omitempty,string"`
+	SellerTransactionFee float64 `json:"seller_transaction_fee,omitempty"`
 	// The transaction_fee of buyer.
-	BuyerTransactionFee float64 `json:"buyer_transaction_fee,omitempty,string"`
+	BuyerTransactionFee float64 `json:"buyer_transaction_fee,omitempty"`
 }
 
 type GetEscrowDetailsResponseOrderBankAccount struct {
@@ -1481,22 +1481,22 @@ type GetEscrowDetailsResponseOrderItem struct {
 	DiscountedPrice float64 `json:"discounted_price,omitempty"`
 	// The offset of this item when the buyer consumed Shopee Coins upon checkout.
 	// In case of bundle deal item, this value will return 0. Due to technical restriction, this field will return incorrect value under bundle deal case if we don’t configure it to 0. Please use the value under "income_details" and "activity" to calculate the breakdown on item level.
-	DiscountFromCoin float64 `json:"discount_from_coin,omitempty,string"`
+	DiscountFromCoin float64 `json:"discount_from_coin,omitempty"`
 	// The offset of this item when the buyer use Shopee voucher.
 	// In case of bundle deal item, this value will return 0. Due to technical restriction, this field will return incorrect value under bundle deal case if we don’t configure it to 0. Please use the value under "income_details" and "activity" to calculate the breakdown on item level.
-	DiscountFromVoucher float64 `json:"discount_from_voucher,omitempty,string"`
+	DiscountFromVoucher float64 `json:"discount_from_voucher,omitempty"`
 	// The offset of this item when the buyer use seller-specific voucher.
 	// In case of bundle deal item, this value will return 0. Due to technical restriction, this field will return incorrect value under bundle deal case if we don’t configure it to 0. Please use the value under "income_details" and "activity" to calculate the breakdown on item level.
-	DiscountFromVoucherSeller float64 `json:"discount_from_voucher_seller,omitempty,string"`
+	DiscountFromVoucherSeller float64 `json:"discount_from_voucher_seller,omitempty"`
 	// Platform subsidy to the seller for this item.
 	// In case of bundle deal item, this value will return 0. Due to technical restriction, this field will return incorrect value under bundle deal case if we don’t configure it to 0. Please use the value under "income_details" and "activity" to calculate the breakdown on item level.
-	SellerRebate float64 `json:"seller_rebate,omitempty,string"`
+	SellerRebate float64 `json:"seller_rebate,omitempty"`
 	// This value indicates the actual price the buyer pay.
 	// In case of bundle deal item, this value will return 0 as by design bundle deal discount will not be breakdown to item/variation level. Due to technical restriction, the value will return the price before bundle deal if we don't configure it to 0. Please use the value under "income_details" and "activity" to calculate the bundle deal discount breakdown on item level.
 	DealPrice float64 `json:"deal_price,omitempty"`
 	// This value indicate the offset via credit card promotion.
 	// In case of bundle deal item, this value will return 0. Due to technical restriction, this field will return incorrect value under bundle deal case if we don’t configure it to 0. Please use the value under "income_details" and "activity" to calculate the breakdown on item level.
-	CreditCardPromotion float64 `json:"credit_card_promotion,omitempty,string"`
+	CreditCardPromotion float64 `json:"credit_card_promotion,omitempty"`
 	// To indicate if this item belongs to an addon deal.
 	IsAddOnDeal bool `json:"is_add_on_deal,omitempty"`
 	// To indicate if this item is main item or sub item. True means main item, false means sub item.
@@ -1590,7 +1590,7 @@ type GetEscrowReleasedOrdersResponseOrder struct {
 	// Shopee's unique identifier for an order.
 	OrderSN string `json:"ordersn,omitempty"`
 	// Order's escrow amount.
-	PayoutAmount float64 `json:"payout_amount,omitempty,string"`
+	PayoutAmount float64 `json:"payout_amount,omitempty"`
 	// Timestamp of escrow amount transaction finished.
 	EscrowReleaseTime int `json:"escrow_release_time,omitempty"`
 }
@@ -1650,18 +1650,18 @@ type GetLogisticsResponseLogisticSize struct {
 
 type GetLogisticsResponseLogisticLimit struct {
 	// The max weight for an item on this logistic channel.If the value is 0 or null, that means there is no limit.
-	ItemMaxWeight float64 `json:"item_max_weight,omitempty,string"`
+	ItemMaxWeight float64 `json:"item_max_weight,omitempty"`
 	// The min weight for an item on this logistic channel. If the value is 0 or null, that means there is no limit.
-	ItemMinWeight float64 `json:"item_min_weight,omitempty,string"`
+	ItemMinWeight float64 `json:"item_min_weight,omitempty"`
 }
 
 type GetLogisticsResponseLogisticDimension struct {
 	// The max height limit.
-	Height float64 `json:"height,omitempty,string"`
+	Height float64 `json:"height,omitempty"`
 	// The max width limit.
-	Width float64 `json:"width,omitempty,string"`
+	Width float64 `json:"width,omitempty"`
 	// The max length limit.
-	Length float64 `json:"length,omitempty,string"`
+	Length float64 `json:"length,omitempty"`
 	// The unit for the limit.
 	Unit string `json:"unit,omitempty"`
 }
@@ -2117,7 +2117,7 @@ type GetReturnListResponseReturn struct {
 	// The serial number of return.
 	ReturnSN int `json:"return_sn,omitempty"`
 	// Amount of the refund.
-	RefundAmount float64 `json:"refund_amount,omitempty,string"`
+	RefundAmount float64 `json:"refund_amount,omitempty"`
 	// Currency of the return.
 	Currency string `json:"currency,omitempty"`
 	// The time of return create.
@@ -2137,7 +2137,7 @@ type GetReturnListResponseReturn struct {
 	// Items to be sent back to seller. Can be either integrated/non-integrated.
 	NeedsLogistics bool `json:"needs_logistics,omitempty"`
 	// Order price before discount.
-	AmountBeforeDiscount float64 `json:"amount_before_discount,omitempty,string"`
+	AmountBeforeDiscount float64 `json:"amount_before_discount,omitempty"`
 	//
 	User GetReturnListResponseReturnUser `json:"user,omitempty"`
 	//
@@ -2467,9 +2467,9 @@ type GetTransactionListResponseTransactionList struct {
 	// The type of transaction.
 	TransactionType string `json:"transaction_type,omitempty"`
 	// The amount of transaction.
-	Amount float64 `json:"amount,omitempty,string"`
+	Amount float64 `json:"amount,omitempty"`
 	// The current balance of this account.
-	CurrentBalance float64 `json:"current_balance,omitempty,string"`
+	CurrentBalance float64 `json:"current_balance,omitempty"`
 	// The create time of the transaction.
 	CreateTime int `json:"create_time,omitempty"`
 	// Shopee's unique identifier for an order.
@@ -2479,7 +2479,7 @@ type GetTransactionListResponseTransactionList struct {
 	// The type of withdrawal.
 	WithdrawalType string `json:"withdrawal_type,omitempty"`
 	// This field indicates the transaction fee.
-	TransactionFee float64 `json:"transaction_fee,omitempty,string"`
+	TransactionFee float64 `json:"transaction_fee,omitempty"`
 	// The detailed description of TOPUP SUCCESS and TOPUP FAILED.
 	Description string `json:"description,omitempty"`
 	// The name of buyer.
@@ -2489,7 +2489,7 @@ type GetTransactionListResponseTransactionList struct {
 	// Name of the shop.
 	ShopName string `json:"shop_name,omitempty"`
 	// Withdraw ID when transaction type is withdraw_created, withdrawal_completed, withdrawal_cancelled.
-	WithdrawID float64 `json:"withdraw_id,omitempty,string"`
+	WithdrawID float64 `json:"withdraw_id,omitempty"`
 	// The reason for ADJUSTMENT_ADD and ADJUSTMENT_MINUS.
 	Reason string `json:"reason,omitempty"`
 	// Use this field to indicate the event where a withdrawal is split into several withdrawals due to the withdrawal limit.
@@ -2526,69 +2526,69 @@ type FirstMileUnbindRequestOrderList struct {
 
 type MyIncomeResponseOrderIncome struct {
 	// The total amount that the seller is expected to receive for the order and will change before order completed. escrow_amount=buyer_total_amount+shopee_discount+voucher_from_shopee+coins+payment_promotion-buyer_transaction_fee-cross_border_tax-commission_fee-service_fee-seller_transaction_fee-seller_coin_cash_back-escrow_tax-drc_adjustable_refund+final_shipping_fee（could be positive/negative)
-	EscrowAmount float64 `json:"escrow_amount,omitempty,string"`
+	EscrowAmount float64 `json:"escrow_amount,omitempty"`
 	// The total amount that paid by buyer.buyer_total_amount= original price -seller_discount -shopee_discount -voucher_from_seller -voucher_from_shopee -coin -payment_promotion +buyer_paid_shipping_fee +buyer_transaction_fee +cross_border_tax
-	BuyerTotalAmount float64 `json:"buyer_total_amount,omitempty,string"`
+	BuyerTotalAmount float64 `json:"buyer_total_amount,omitempty"`
 	// The original price of the item before ANY promotion/discount in the listing currency. It returns the subtotal of that specific item if quantity exceeds 1.
 	OriginalPrice float64 `json:"original_price,omitempty"`
 	// Final sum of each item seller discount of a specific order.
-	SellerDiscount float64 `json:"seller_discount,omitempty,string"`
+	SellerDiscount float64 `json:"seller_discount,omitempty"`
 	// Final sum of each item Shopee discount of a specific order. This amount will rebate to seller.
-	ShopeeDiscount float64 `json:"shopee_discount,omitempty,string"`
+	ShopeeDiscount float64 `json:"shopee_discount,omitempty"`
 	// Final value of voucher provided by Seller for the order.
-	VoucherFromSeller float64 `json:"voucher_from_seller,omitempty,string"`
+	VoucherFromSeller float64 `json:"voucher_from_seller,omitempty"`
 	// Final value of voucher provided by Shopee for the order.
-	VoucherFromShopee float64 `json:"voucher_from_shopee,omitempty,string"`
+	VoucherFromShopee float64 `json:"voucher_from_shopee,omitempty"`
 	// Final value of coins used by seller for the order.
-	Coins float64 `json:"coins,omitempty,string"`
+	Coins float64 `json:"coins,omitempty"`
 	// The shipping fee paid by buyer.
-	BuyerPaidShippingFee float64 `json:"buyer_paid_shipping_fee,omitempty,string"`
+	BuyerPaidShippingFee float64 `json:"buyer_paid_shipping_fee,omitempty"`
 	// Tansaction fee paid by buyer for the order.
-	BuyerTransactionFee float64 `json:"buyer_transaction_fee,omitempty,string"`
+	BuyerTransactionFee float64 `json:"buyer_transaction_fee,omitempty"`
 	// Amount incurred by Buyer for purchasing items outside of home country. Amount may change after Return Refund.
-	CrossBorderTax float64 `json:"cross_border_tax,omitempty,string"`
+	CrossBorderTax float64 `json:"cross_border_tax,omitempty"`
 	// The amount offset via payment promotion.
-	PaymentPromotion float64 `json:"payment_promotion,omitempty,string"`
+	PaymentPromotion float64 `json:"payment_promotion,omitempty"`
 	// The commission fee charged by Shopee platform if applicable.
-	CommissionFee float64 `json:"commission_fee,omitempty,string"`
+	CommissionFee float64 `json:"commission_fee,omitempty"`
 	// Amount charged by Shopee to seller for additional services.
-	ServiceFee float64 `json:"service_fee,omitempty,string"`
+	ServiceFee float64 `json:"service_fee,omitempty"`
 	// Tansaction fee paid by seller for the order.
-	SellerTransactionFee float64 `json:"seller_transaction_fee,omitempty,string"`
+	SellerTransactionFee float64 `json:"seller_transaction_fee,omitempty"`
 	// Compensation to seller in case of lost parcel
-	SellerLostCompensation float64 `json:"seller_lost_compensation,omitempty,string"`
+	SellerLostCompensation float64 `json:"seller_lost_compensation,omitempty"`
 	// Value of coins provided by Seller for purchasing with his or her store for the order.
-	SellerCoinCashBack float64 `json:"seller_coin_cash_back,omitempty,string"`
+	SellerCoinCashBack float64 `json:"seller_coin_cash_back,omitempty"`
 	// Cross-border tax imposed by the Indonesian government on sellers.
-	EscrowTax float64 `json:"escrow_tax,omitempty,string"`
+	EscrowTax float64 `json:"escrow_tax,omitempty"`
 	// Final adjusted amount that seller has to bear as part of escrow. This amount could be negative or positive. = min(actual_shipping_fee, shopee_shipping_rebate) + shipping_discount_from_3pl - actual_shipping_fee
-	FinalShippingFee float64 `json:"final_shipping_fee,omitempty,string"`
+	FinalShippingFee float64 `json:"final_shipping_fee,omitempty"`
 	// The final shipping cost of order and it is negative. For Non-integrated logistics channel is 0.
-	ActualShippingFee float64 `json:"actual_shipping_fee,omitempty,string"`
+	ActualShippingFee float64 `json:"actual_shipping_fee,omitempty"`
 	// The platform shipping subsidy to the seller.
-	ShopeeShippingRebate float64 `json:"shopee_shipping_rebate,omitempty,string"`
+	ShopeeShippingRebate float64 `json:"shopee_shipping_rebate,omitempty"`
 	// The discount of shipping fee from 3PL. Currently only applicable to ID
-	ShippingFeeDiscountFrom3PL float64 `json:"shipping_fee_discount_from_3pl,omitempty,string"`
+	ShippingFeeDiscountFrom3PL float64 `json:"shipping_fee_discount_from_3pl,omitempty"`
 	// The shipping discount defined by seller.
-	SellerShippinhDiscount float64 `json:"seller_shipping_discount,omitempty,string"`
+	SellerShippinhDiscount float64 `json:"seller_shipping_discount,omitempty"`
 	// The estimated shipping fee is an estimation calculated by Shopee based on specific logistics courier's standard.
-	EstimatedShippingFee float64 `json:"estimated_shipping_fee,omitempty,string"`
+	EstimatedShippingFee float64 `json:"estimated_shipping_fee,omitempty"`
 	// The list of voucher code provided by seller.
-	SellerVoucherCode []string `json:"seller_voucher_code,omitempty,string"`
+	SellerVoucherCode []string `json:"seller_voucher_code,omitempty"`
 	// The adjustable refund amount from Shopee Dispute Resolution Center.
-	DRCAdjustableRefund float64 `json:"drc_adjustable_refund,omitempty,string"`
+	DRCAdjustableRefund float64 `json:"drc_adjustable_refund,omitempty"`
 	// Final amount paid by the buyer for the items in a specific order.
-	CostOfGoodsSold float64 `json:"cost_of_goods_sold,omitempty,string"`
+	CostOfGoodsSold float64 `json:"cost_of_goods_sold,omitempty"`
 	// Amount paid by the buyer for the items in a specific order.
-	OriginalCostOfGoodsSold float64 `json:"original_cost_of_goods_sold,omitempty,string"`
+	OriginalCostOfGoodsSold float64 `json:"original_cost_of_goods_sold,omitempty"`
 	// Sum of each item Shopee discount of a specific order
-	OriginalShopeeDiscount float64 `json:"original_shopee_discount,omitempty,string"`
+	OriginalShopeeDiscount float64 `json:"original_shopee_discount,omitempty"`
 	// Amount returned to Seller in the event of Partial Return.
-	SellerReturnRefund float64 `json:"seller_return_refund,omitempty,string"`
+	SellerReturnRefund float64 `json:"seller_return_refund,omitempty"`
 	// The identifier for an API request for error tracking.
-	RequestID string `json:"request_id,omitempty,string"`
+	RequestID string `json:"request_id,omitempty"`
 	// The list of the serial number of refund.
-	RefundIDList []string `json:"refund_id_list,omitempty,string"`
+	RefundIDList []string `json:"refund_id_list,omitempty"`
 }
 
 //=======================================================
