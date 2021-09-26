@@ -134,7 +134,7 @@ type AddRequestWholesale struct {
 
 type AddRequestAttribute struct {
 	// related to shopee.item.GetAttributes result.attributes.attribute_id
-	AttributesID int64 `json:"attributes_id,omitempty"`
+	AttributesID int64 `json:"attributes_id"`
 	// related to shopee.item.GetAttributes one of result.attributes.options. Max length is 40 letters.
 	Value string `json:"value,omitempty"`
 }
