@@ -511,7 +511,7 @@ func (s *ShopeeClient) post(method string, in interface{}) ([]byte, error) {
 		return nil, errResp
 	}
 
-	return s.patchFloat(body), nil
+	return body, nil
 }
 
 // patchFloat 會修正無法將 JSON 的字串值轉換成 Float64 型態的錯誤，這主要是因為 Shopee 會在某些時候以 `""`（空字串）當作是 Float64 的零值，
