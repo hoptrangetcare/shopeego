@@ -50,7 +50,7 @@ type AddRequest struct {
 	// Description of the item in local language. HTML is not supported.
 	Description string `json:"description,omitempty"`
 	// The current price of the item in the listing currency. This value will be ignored if there is variation level price input.
-	Price float64 `json:"price,omitempty,string"`
+	Price float64 `json:"price,omitempty"`
 	// The current stock quantity of the item. This value will be ignored if there is variation level stock input.
 	Stock int `json:"stock,omitempty"`
 	// An item SKU (stock keeping unit) is an identifier defined by a seller, sometimes called parent SKU. Item SKU can be assigned to an item in Shopee Listings.
