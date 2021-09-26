@@ -112,7 +112,7 @@ type AddRequestVariation struct {
 	// The current stock quantity of the variation in the listing currency.
 	Stock int `json:"stock,omitempty"`
 	// The current price of the variation in the listing currency.
-	Price float64 `json:"price,omitempty,string"`
+	Price float64 `json:"price,omitempty"`
 	// A variation SKU (stock keeping unit) is an identifier defined by a seller. It is only intended for the seller's use. Many sellers assign a SKU to an item of a specific type, size, and color, which are variations of one item in Shopee Listings.
 	VariationSku string `json:"variation_sku,omitempty"`
 }
@@ -164,7 +164,7 @@ type AddResponseItemVariation struct {
 	// Name of the variation that belongs to the same item. A seller can offer variations of the same item. For example, the seller could create a fixed-priced listing for a t-shirt design and offer the shirt in different colors and sizes. In this case, each color and size combination is a separate variation. Each variation can have a different quantity and price.
 	Name string `json:"name,omitempty"`
 	// The current price of the variation in the listing currency.If item is in promotion, this value is discount price.
-	Price float64 `json:"price,omitempty,string"`
+	Price float64 `json:"price,omitempty"`
 	// The current stock quantity of the variation in the listing currency.
 	Stock int `json:"stock,omitempty"`
 	// Enumerated type that defines the current status of the variation. Applicable values: MODEL_NORMAL and MODEL_DELETED.
@@ -236,7 +236,7 @@ type AddResponseItem struct {
 	// This is to indicate whether the item has variation(s).
 	HasVariation bool `json:"has_variation,omitempty"`
 	// The current price of the item in the listing currency.If item is in promotion, this value is discount price.
-	Price float64 `json:"price,omitempty,string"`
+	Price float64 `json:"price,omitempty"`
 	// The current stock quantity of the item.
 	Stock int `json:"stock,omitempty"`
 	// Timestamp that indicates the date and time that the item was created.
@@ -322,7 +322,7 @@ type AddVariationsRequestVariation struct {
 	// The current stock quantity of the variation in the listing currency.
 	Stock int `json:"stock,omitempty"`
 	// The current price of the variation in the listing currency.
-	Price float64 `json:"price,omitempty,string"`
+	Price float64 `json:"price,omitempty"`
 	// A variation SKU (stock keeping unit) is an identifier defined by a seller. It is only intended for the seller's use. Many sellers assign a SKU to an item of a specific type, size, and color, which are variations of one item in Shopee Listings.
 	VariationSKU string `json:"variation_sku,omitempty"`
 }
@@ -339,7 +339,7 @@ type AddVariationsResponseVariation struct {
 	// Name of the variation that belongs to the same item. A seller can offer variations of the same item. For example, the seller could create a fixed-priced listing for a t-shirt design and offer the shirt in different colors and sizes. In this case, each color and size combination is a separate variation. Each variation can have a different quantity and price.
 	Name string `json:"name,omitempty"`
 	// The current price of the variation in the listing currency.If item is in promotion, this value is discount price.
-	Price float64 `json:"price,omitempty,string"`
+	Price float64 `json:"price,omitempty"`
 	// The current stock quantity of the variation in the listing currency.
 	Stock int `json:"stock,omitempty"`
 	// Enumerated type that defines the current status of the variation. Applicable values: MODEL_NORMAL and MODEL_DELETED.
@@ -394,7 +394,7 @@ type GetItemDetailResponseItemVariation struct {
 	// Name of the variation that belongs to the same item. A seller can offer variations of the same item. For example, the seller could create a fixed-priced listing for a t-shirt design and offer the shirt in different colors and sizes. In this case, each color and size combination is a separate variation. Each variation can have a different quantity and price.
 	Name string `json:"name,omitempty"`
 	// The current price of the variation in the listing currency.If item is in promotion, this value is discount price.
-	Price float64 `json:"price,omitempty,string"`
+	Price float64 `json:"price,omitempty"`
 	// The current stock quantity of the variation in the listing currency.
 	Stock int `json:"stock,omitempty"`
 	// Enumerated type that defines the current status of the variation. Applicable values: MODEL_NORMAL and MODEL_DELETED.
@@ -478,7 +478,7 @@ type GetItemDetailResponseItem struct {
 	// This is to indicate whether the item has variation(s).
 	HasVariaion bool `json:"has_variaion,omitempty"`
 	// The current price of the item in the listing currency.If item is in promotion, this value is discount price.
-	Price float64 `json:"price,omitempty,string"`
+	Price float64 `json:"price,omitempty"`
 	// The current stock quantity of the item.
 	Stock int `json:"stock,omitempty"`
 	// Timestamp that indicates the date and time that the item was created.
@@ -587,7 +587,7 @@ type UpdateItemResponseItemVariation struct {
 	// Name of the variation that belongs to the same item. A seller can offer variations of the same item. For example, the seller could create a fixed-priced listing for a t-shirt design and offer the shirt in different colors and sizes. In this case, each color and size combination is a separate variation. Each variation can have a different quantity and price.
 	Name string `json:"name,omitempty"`
 	// The current price of the variation in the listing currency.If item is in promotion, this value is discount price.
-	Price float64 `json:"price,omitempty,string"`
+	Price float64 `json:"price,omitempty"`
 	// The current stock quantity of the variation in the listing currency.
 	Stock int `json:"stock,omitempty"`
 	// Enumerated type that defines the current status of the variation. Applicable values: MODEL_NORMAL and MODEL_DELETED.
@@ -659,7 +659,7 @@ type UpdateItemResponseItem struct {
 	// This is to indicate whether the item has variation(s).
 	HasVariation bool `json:"has_variation,omitempty"`
 	// The current price of the item in the listing currency. If item is in promotion, this value is discount price.
-	Price float64 `json:"price,omitempty,string"`
+	Price float64 `json:"price,omitempty"`
 	// The current stock quantity of the item.
 	Stock int `json:"stock,omitempty"`
 	// Timestamp that indicates the date and time that the item was created.
@@ -716,7 +716,7 @@ type UpdatePriceResponseItem struct {
 	// The time when price of the item is updated.
 	ModifiedTime int `json:"modified_time,omitempty"`
 	// Specify the revised price of the item.
-	Price float64 `json:"price,omitempty,string"`
+	Price float64 `json:"price,omitempty"`
 }
 
 //=======================================================
@@ -744,7 +744,7 @@ type UpdateVariationPriceResponseItem struct {
 	// Shopee's unique identifier for a variation of an item.
 	VariationID int64 `json:"variation_id,omitempty"`
 	// Specify the revised price of one variation of the item.
-	Price float64 `json:"price,omitempty,string"`
+	Price float64 `json:"price,omitempty"`
 }
 
 //=======================================================
@@ -919,7 +919,7 @@ type InitTierVariationRequestVariation struct {
 	// Stock value of this variation item. The original variation stock will be override when calling this API to initialize 2-tier structure for an existed item. 0 stock will make this variation a greyout option for buyer.
 	Stock int `json:"stock,omitempty"`
 	// Price value of this variation item. The original variation price will be override when calling this API to initialize 2-tier structure for an existed item.
-	Price float64 `json:"price,omitempty,string"`
+	Price float64 `json:"price,omitempty"`
 	// SKU string of this variation.SKU length should be under 100.
 	VariationSKU string `json:"variation_sku,omitempty"`
 }
@@ -945,7 +945,7 @@ type AddTierVariationRequestVariation struct {
 	// Stock value of this variation item. 0 stock will make this variation a greyout option for buyer.
 	Stock int `json:"stock,omitempty"`
 	// Price value of this variation item.
-	Price float64 `json:"price,omitempty,string"`
+	Price float64 `json:"price,omitempty"`
 	// SKU string of this variation item.
 	VariationSKU string `json:"variation_sku,omitempty"`
 }

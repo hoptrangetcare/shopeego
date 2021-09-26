@@ -396,7 +396,7 @@ type UpdatePriceRequest struct {
 	// Shopee's unique identifier for an item. Please input the item_id of an item to be changed.
 	ItemID int64 `json:"item_id,omitempty"`
 	// Specify the revised price of the item. This value will be ignored if there is variation level price input.
-	Price float64 `json:"price,omitempty,string"`
+	Price float64 `json:"price,omitempty"`
 	// Partner ID is assigned upon registration is successful. Required for all requests.
 	PartnerID int64 `json:"partner_id,omitempty"`
 	// Shopee's unique identifier for a shop. Required for all requests.
@@ -436,7 +436,7 @@ type UpdateVariationPriceRequest struct {
 	// Shopee's unique identifier for an item. Please input the item_id of an item to be changed.
 	ItemID int64 `json:"item_id,omitempty"`
 	// Specify the revised price of one variation of the item.
-	Price float64 `json:"price,omitempty,string"`
+	Price float64 `json:"price,omitempty"`
 	// Shopee's unique identifier for a variation of an item. Please input the variation_id of a variation to be changed. The variation_id and item_id pair must be matched in order to perform the update.
 	VariationID int64 `json:"variation_id,omitempty"`
 	// Partner ID is assigned upon registration is successful. Required for all requests.
