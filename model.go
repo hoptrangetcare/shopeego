@@ -129,7 +129,7 @@ type AddRequestWholesale struct {
 	// The max count of this tier wholesale.
 	Max int `json:"max,omitempty"`
 	// The current price of the wholesale in the listing currency. The price must be cheaper than original price. And if the wholesale is not the first one, the price must be cheaper than previous tier.
-	UnitPrice float64 `json:"unit_price,omitempty,string"`
+	UnitPrice float64 `json:"unit_price,omitempty"`
 }
 
 type AddRequestAttribute struct {
@@ -174,7 +174,7 @@ type AddResponseItemVariation struct {
 	// Timestamp that indicates the last time that there was a change in value of the variation, such as price/stock change.
 	UpdateTime int `json:"update_time,omitempty"`
 	// The original price of the variation in the listing currency.
-	OriginalPrice float64 `json:"original_price,omitempty,string"`
+	OriginalPrice float64 `json:"original_price,omitempty"`
 	// The ID of discount activity the variation is currently in. One variation can only have one discount at a time. discount_id will be 0 if the variation has no discount applied.
 	DiscountID int64 `json:"discount_id,omitempty"`
 }
@@ -215,7 +215,7 @@ type AddResponseItemWholesale struct {
 	// The max count of this tier wholesale.
 	Max int `json:"max,omitempty"`
 	// The current price of the wholesale in the listing currency.If item is in promotion, this price is useless.
-	UnitPrice float64 `json:"unit_price,omitempty,string"`
+	UnitPrice float64 `json:"unit_price,omitempty"`
 }
 
 type AddResponseItem struct {
@@ -248,7 +248,7 @@ type AddResponseItem struct {
 	// Could call shopee.item.GetCategories to get category detail.Related to result.categories.category_id.
 	CategoryID int64 `json:"category_id,omitempty"`
 	// The original price of the item in the listing currency.
-	OriginalPrice float64 `json:"original_price,omitempty,string"`
+	OriginalPrice float64 `json:"original_price,omitempty"`
 	// The variation list of item.
 	Variations []AddResponseItemVariation `json:"variations,omitempty"`
 	//
@@ -349,7 +349,7 @@ type AddVariationsResponseVariation struct {
 	// Timestamp that indicates the last time that there was a change in value of the variation, such as price/stock change.
 	UpdateTime int `json:"update_time,omitempty"`
 	// The original price of the variation in the listing currency.
-	OriginalPrice float64 `json:"original_price,omitempty,string"`
+	OriginalPrice float64 `json:"original_price,omitempty"`
 }
 
 //=======================================================
@@ -404,17 +404,17 @@ type GetItemDetailResponseItemVariation struct {
 	// Timestamp that indicates the last time that there was a change in value of the variation, such as price/stock change.
 	UpdateTime int `json:"update_time,omitempty"`
 	// The original price of the variation in the listing currency.
-	OriginalPrice float64 `json:"original_price,omitempty,string"`
+	OriginalPrice float64 `json:"original_price,omitempty"`
 	// The ID of discount activity the variation is currently in. One variation can only have one discount at a time. discount_id will be 0 if the variation has no discount applied.
 	DiscountID int64 `json:"discount_id,omitempty"`
 	// Use this field to get the locked stock of variation by promotions.
 	ReservedStock int64 `json:"reserved_stock,omitempty"`
 	// Use this field to indicate the after-tax price of variation.
-	InflatedPrice float64 `json:"inflated_price,omitempty,string"`
+	InflatedPrice float64 `json:"inflated_price,omitempty"`
 	// Use this field to indicate the after-tax original price of variation.
-	InflatedOriginalPrice float64 `json:"inflated_original_price,omitempty,string"`
+	InflatedOriginalPrice float64 `json:"inflated_original_price,omitempty"`
 	// The settlement price of SIP item.
-	SIPItemPrice float64 `json:"sip_item_price,omitempty,string"`
+	SIPItemPrice float64 `json:"sip_item_price,omitempty"`
 	// The strategy of creating sip_item_price. auto: automatically created; manual: manually created.
 	PriceSource string `json:"price_source,omitempty"`
 }
@@ -455,7 +455,7 @@ type GetItemDetailResponseItemWholesale struct {
 	// The max count of this tier wholesale.
 	Max int `json:"max,omitempty"`
 	// The current price of the wholesale in the listing currency.If item is in promotion, this price is useless.
-	UnitPrice float64 `json:"unit_price,omitempty,string"`
+	UnitPrice float64 `json:"unit_price,omitempty"`
 }
 
 type GetItemDetailResponseItem struct {
@@ -490,7 +490,7 @@ type GetItemDetailResponseItem struct {
 	// Could call shopee.item.GetCategories to get category detail.Related to result.categories.category_id
 	CategoryID int64 `json:"category_id,omitempty"`
 	// The original price of the item in the listing currency.
-	OriginalPrice float64 `json:"original_price,omitempty,string"`
+	OriginalPrice float64 `json:"original_price,omitempty"`
 	// The variation list of item
 	Variations []GetItemDetailResponseItemVariation `json:"variations,omitempty"`
 	//
@@ -559,7 +559,7 @@ type UpdateItemRequestWholesale struct {
 	// The max count of this tier wholesale.
 	Max int `json:"max,omitempty"`
 	// The current price of the wholesale in the listing currency. The price must be cheaper than original price. And if the wholesale is not the first one, the price must be cheaper than previous tier.'
-	UnitPrice float64 `json:"unit_price,omitempty,string"`
+	UnitPrice float64 `json:"unit_price,omitempty"`
 }
 
 type UpdateItemRequestLogistic struct {
@@ -638,7 +638,7 @@ type UpdateItemResponseItemWholesale struct {
 	// The max count of this tier wholesale.
 	Max int `json:"max,omitempty"`
 	// The current price of the wholesale in the listing currency.If item is in promotion, this price is useless.
-	UnitPrice float64 `json:"unit_price,omitempty,string"`
+	UnitPrice float64 `json:"unit_price,omitempty"`
 }
 
 type UpdateItemResponseItem struct {
@@ -671,7 +671,7 @@ type UpdateItemResponseItem struct {
 	// Could call shopee.item.GetCategories to get category detail.Related to result.categories.category_id
 	CategoryID int64 `json:"category_id,omitempty"`
 	// The original price of the item in the listing currency.
-	OriginalPrice float64 `json:"original_price,omitempty,string"`
+	OriginalPrice float64 `json:"original_price,omitempty"`
 	// The variation list of item
 	Variations []UpdateItemResponseItemVariation `json:"variations,omitempty"`
 	//
@@ -1052,7 +1052,7 @@ type GetPromotionInfoResponseItemPromotion struct {
 	// End timestamp of promotion.
 	EndTime int `json:"end_time,omitempty"`
 	// The promotion price of item.
-	PromotionPrice float64 `json:"promotion_price,omitempty,string"`
+	PromotionPrice float64 `json:"promotion_price,omitempty"`
 	// The Locked stock of item by promotion.
 	ReservedStock int `json:"reserved_stock,omitempty"`
 	// The sold out timestamp of promotion stock.
@@ -1096,7 +1096,7 @@ type AddDiscountRequestItemVariation struct {
 	// Shopee's unique identifier for a variation of an item. If there is no variation of this item, you don't need to input this param. Dafault is 0.
 	VariationID int64 `json:"variation_id,omitempty"`
 	// The discount price of the item.
-	VariationPromotionPrice float64 `json:"variation_promotion_price,omitempty,string"`
+	VariationPromotionPrice float64 `json:"variation_promotion_price,omitempty"`
 }
 
 type AddDiscountRequestItem struct {
@@ -1105,7 +1105,7 @@ type AddDiscountRequestItem struct {
 	//
 	Variations []AddDiscountRequestItemVariation `json:"variations,omitempty"`
 	// The discount price of the item. If the item has no variation, this param is necessary.
-	ItemPromotionPrice float64 `json:"item_promotion_price,omitempty,string"`
+	ItemPromotionPrice float64 `json:"item_promotion_price,omitempty"`
 	// The max number of this product in the promotion price.
 	PurchaseLimit int `json:"purchase_limit,omitempty"`
 }
@@ -1118,7 +1118,7 @@ type AddDiscountItemRequestItemVariation struct {
 	// Shopee's unique identifier for a variation of an item. If there is no variation of this item, you don't need to input this param. Dafault is 0.
 	VariationID int64 `json:"variation_id,omitempty"`
 	// The discount price of the item.
-	VariationPromotionPrice float64 `json:"variation_promotion_price,omitempty,string"`
+	VariationPromotionPrice float64 `json:"variation_promotion_price,omitempty"`
 }
 
 type AddDiscountItemRequestItem struct {
@@ -1127,7 +1127,7 @@ type AddDiscountItemRequestItem struct {
 	//
 	Variations []AddDiscountItemRequestItemVariation `json:"variations,omitempty"`
 	// The discount price of the item. If the item has no variation, this param is necessary.
-	ItemPromotionPrice float64 `json:"item_promotion_price,omitempty,string"`
+	ItemPromotionPrice float64 `json:"item_promotion_price,omitempty"`
 	// The max number of this product in the promotion price.
 	PurchaseLimit int `json:"purchase_limit,omitempty"`
 }
@@ -1142,9 +1142,9 @@ type GetDiscountDetailResponseItemVariation struct {
 	// Name of the variation that belongs to the same item.
 	VariationName string `json:"variation_name,omitempty"`
 	// The original price before discount of the variation.
-	VariationOriginalPrice float64 `json:"variation_original_price,omitempty,string"`
+	VariationOriginalPrice float64 `json:"variation_original_price,omitempty"`
 	// The discount price of the variation.
-	VariationPromotionPrice float64 `json:"variation_promotion_price,omitempty,string"`
+	VariationPromotionPrice float64 `json:"variation_promotion_price,omitempty"`
 	// The current stock quantity of the variation.
 	VariationStock int `json:"variation_stock,omitempty"`
 }
@@ -1157,9 +1157,9 @@ type GetDiscountDetailResponseItem struct {
 	// The max number of this product in the promotion price.
 	PurchaseLimit int `json:"purchase_limit,omitempty"`
 	// The original price before discount of the item. If there is variation, this value is 0.
-	ItemOriginalPrice float64 `json:"item_original_price,omitempty,string"`
+	ItemOriginalPrice float64 `json:"item_original_price,omitempty"`
 	// The discount price of the item. If there is variation, this value is 0.
-	ItemPromotionPrice float64 `json:"item_promotion_price,omitempty,string"`
+	ItemPromotionPrice float64 `json:"item_promotion_price,omitempty"`
 	// The current stock quantity of the item.
 	Stock int `json:"stock,omitempty"`
 	//
@@ -1191,7 +1191,7 @@ type UpdateDiscountItemsRequestItemVariation struct {
 	// Shopee's unique identifier for a variation of an item. If there is no variation of this item, you don't need to input this param. Dafault is 0.
 	VariationID int64 `json:"variation_id,omitempty"`
 	// The discount price of the item.
-	VariationPromotionPrice float64 `json:"variation_promotion_price,omitempty,string"`
+	VariationPromotionPrice float64 `json:"variation_promotion_price,omitempty"`
 }
 
 type UpdateDiscountItemsRequestItem struct {
@@ -1200,7 +1200,7 @@ type UpdateDiscountItemsRequestItem struct {
 	// The max number of this product in the promotion price.
 	PurchaseLimit int `json:"purchase_limit,omitempty"`
 	// The discount price of the item.
-	ItemOriginalPrice float64 `json:"item_original_price,omitempty,string"`
+	ItemOriginalPrice float64 `json:"item_original_price,omitempty"`
 	//
 	Variations []UpdateDiscountItemsRequestItemVariation `json:"variations,omitempty"`
 }
@@ -1273,10 +1273,10 @@ type GetOrderDetailsResponseOrderItem struct {
 	// The number of identical items purchased at the same time by the same buyer from one listing/item.
 	VariationQuantityPurchased int `json:"variation_quantity_purchased,omitempty"`
 	// The original price of the item in the listing currency.
-	VariationOriginalPrice float64 `json:"variation_original_price,omitempty,string"`
+	VariationOriginalPrice float64 `json:"variation_original_price,omitempty"`
 	// The after-discount price of the item in the listing currency. If there is no discount, this value will be same as that of variation_original_price.
 	// In case of bundle deal item, this value will return 0 as by design bundle deal discount will not be breakdown to item/variation level. Due to technical restriction, the value will return the price before bundle deal if we don't configure it to 0. Please call GetEscrowDetails if you want to calculate item-level discounted price for bundle deal item.
-	VariationDiscountedPrice float64 `json:"variation_discounted_price,omitempty,string"`
+	VariationDiscountedPrice float64 `json:"variation_discounted_price,omitempty"`
 	// This value indicates whether buyer buy the order item in wholesale price.
 	IsWholesale bool `json:"is_wholesale,omitempty"`
 	// The weight of the item
@@ -1443,7 +1443,7 @@ type GetEscrowDetailsResponseOrderActivityItem struct {
 	// The number of identical items purchased at the same time by the same buyer from one listing/item.
 	QuantityPurchased int `json:"quantity_purchased,omitempty"`
 	// The price used to participate activity. E.g. itemA original price is $10, promo price is $9, and bundle deal is buy 2 get 20% off equals to $14.4. The original_price value will be $9 in this case.
-	OriginalPrice float64 `json:"original_price,omitempty,string"`
+	OriginalPrice float64 `json:"original_price,omitempty"`
 }
 
 type GetEscrowDetailsResponseOrderActivity struct {
@@ -1452,9 +1452,9 @@ type GetEscrowDetailsResponseOrderActivity struct {
 	// Type of activity. Currently only one type: bundle_deal
 	ActivityType string `json:"activity_type,omitempty"`
 	// The original TOTAL price of ALL items in one activity(e.g. bundle deal. Define by activity_id) in the listing currency.
-	OriginalPrice float64 `json:"original_price,omitempty,string"`
+	OriginalPrice float64 `json:"original_price,omitempty"`
 	// The after-discocunt TOTAL price of ALL items in one activity(e.g. bundle deal. Define by activity_id) in the listing currency.
-	DiscountedPrice float64 `json:"discounted_price,omitempty,string"`
+	DiscountedPrice float64 `json:"discounted_price,omitempty"`
 	// This object contains the items in this activity.
 	Items []GetEscrowDetailsResponseOrderActivityItem `json:"items,omitempty"`
 }
@@ -1475,10 +1475,10 @@ type GetEscrowDetailsResponseOrderItem struct {
 	// This value indicates the number of identical items purchased at the same time by the same buyer from one listing/item.
 	QuantityPurchased int `json:"quantity_purchased,omitempty"`
 	// The original price of the item before ANY promotion/discount in the listing currency. It returns the subtotal of that specific item if quantity exceeds 1.
-	OriginalPrice float64 `json:"original_price,omitempty,string"`
+	OriginalPrice float64 `json:"original_price,omitempty"`
 	// The after-discount price of the item in the listing currency. It returns the subtotal of that specific item if quantity exceeds 1. If there is no discount, this value will be the same as that of original_price.
 	// In case of bundle deal item, this value will return 0 as by design bundle deal discount will not be breakdown to item/variation level. Due to technical restriction, the value will return the price before bundle deal if we don’t configure it to 0. Please use the value under "income_details" and "activity" to calculate the bundle deal discount breakdown on item level.
-	DiscountedPrice float64 `json:"discounted_price,omitempty,string"`
+	DiscountedPrice float64 `json:"discounted_price,omitempty"`
 	// The offset of this item when the buyer consumed Shopee Coins upon checkout.
 	// In case of bundle deal item, this value will return 0. Due to technical restriction, this field will return incorrect value under bundle deal case if we don’t configure it to 0. Please use the value under "income_details" and "activity" to calculate the breakdown on item level.
 	DiscountFromCoin float64 `json:"discount_from_coin,omitempty,string"`
@@ -1493,7 +1493,7 @@ type GetEscrowDetailsResponseOrderItem struct {
 	SellerRebate float64 `json:"seller_rebate,omitempty,string"`
 	// This value indicates the actual price the buyer pay.
 	// In case of bundle deal item, this value will return 0 as by design bundle deal discount will not be breakdown to item/variation level. Due to technical restriction, the value will return the price before bundle deal if we don't configure it to 0. Please use the value under "income_details" and "activity" to calculate the bundle deal discount breakdown on item level.
-	DealPrice float64 `json:"deal_price,omitempty,string"`
+	DealPrice float64 `json:"deal_price,omitempty"`
 	// This value indicate the offset via credit card promotion.
 	// In case of bundle deal item, this value will return 0. Due to technical restriction, this field will return incorrect value under bundle deal case if we don’t configure it to 0. Please use the value under "income_details" and "activity" to calculate the breakdown on item level.
 	CreditCardPromotion float64 `json:"credit_card_promotion,omitempty,string"`
@@ -1549,9 +1549,9 @@ type GetForderInfoResponseForderItem struct {
 	// The number of identical items/variations purchased at the same time by the same buyer from one listing/item.
 	Num int `json:"num,omitempty"`
 	// The original price of the item in the listing currency.
-	ItemPrice float64 `json:"item_price,omitempty,string"`
+	ItemPrice float64 `json:"item_price,omitempty"`
 	// The original price of the variation in the listing currency.
-	VariationPrice float64 `json:"variation_price,omitempty,string"`
+	VariationPrice float64 `json:"variation_price,omitempty"`
 }
 
 type GetForderInfoResponseForderLogisticsInfo struct {
@@ -2098,7 +2098,7 @@ type GetReturnListResponseReturnItem struct {
 	// Amount of this item.
 	Amount int `json:"amount,omitempty"`
 	// The price of Item.
-	ItemPrice float64 `json:"item_price,omitempty,string"`
+	ItemPrice float64 `json:"item_price,omitempty"`
 	// To indicate if this item belongs to an addon deal.
 	IsAddOnDeal bool `json:"is_add_on_deal,omitempty"`
 	// To indicate if this item is main item or sub item. True means main item, false means sub item.
@@ -2169,7 +2169,7 @@ type GetReturnDetailResponseItem struct {
 	// Amount of this item.
 	Amount int `json:"amount,omitempty"`
 	// The price of item.
-	ItemPrice float64 `json:"item_price,omitempty,string"`
+	ItemPrice float64 `json:"item_price,omitempty"`
 	// To indicate if this item belongs to an addon deal.
 	IsAddOnDeal bool `json:"is_add_on_deal,omitempty"`
 	// To indicate if this item is main item or sub item. True means main item, false means sub item.
@@ -2240,7 +2240,7 @@ type GetTopPicksListResponseCollectionItem struct {
 	// Item name
 	ItemName string `json:"item_name,omitempty"`
 	// Item discounted price(original price if no discount). Item level price will return if it has variation.
-	ItemPrice float64 `json:"item_price,omitempty,string"`
+	ItemPrice float64 `json:"item_price,omitempty"`
 	// The sales of the item
 	Sales int `json:"sales,omitempty"`
 }
@@ -2266,7 +2266,7 @@ type AddTopPicksResponseItem struct {
 	// Item name
 	ItemName string `json:"item_name,omitempty"`
 	// Item discounted price(original price if no discount). Item level price will return if it has variation.
-	ItemPrice float64 `json:"item_price,omitempty,string"`
+	ItemPrice float64 `json:"item_price,omitempty"`
 	// The sales of the item
 	Sales int `json:"sales,omitempty"`
 }
@@ -2281,7 +2281,7 @@ type UpdateTopPicksResponseItem struct {
 	// Item name
 	ItemName string `json:"item_name,omitempty"`
 	// Item discounted price(original price if no discount). Item level price will return if it has variation.
-	ItemPrice float64 `json:"item_price,omitempty,string"`
+	ItemPrice float64 `json:"item_price,omitempty"`
 	// The sales of the item
 	Sales int `json:"sales,omitempty"`
 }
@@ -2530,7 +2530,7 @@ type MyIncomeResponseOrderIncome struct {
 	// The total amount that paid by buyer.buyer_total_amount= original price -seller_discount -shopee_discount -voucher_from_seller -voucher_from_shopee -coin -payment_promotion +buyer_paid_shipping_fee +buyer_transaction_fee +cross_border_tax
 	BuyerTotalAmount float64 `json:"buyer_total_amount,omitempty,string"`
 	// The original price of the item before ANY promotion/discount in the listing currency. It returns the subtotal of that specific item if quantity exceeds 1.
-	OriginalPrice float64 `json:"original_price,omitempty,string"`
+	OriginalPrice float64 `json:"original_price,omitempty"`
 	// Final sum of each item seller discount of a specific order.
 	SellerDiscount float64 `json:"seller_discount,omitempty,string"`
 	// Final sum of each item Shopee discount of a specific order. This amount will rebate to seller.
