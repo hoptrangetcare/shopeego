@@ -264,11 +264,11 @@ type AddResponseItem struct {
 	// The conllection number of item.
 	Likes int32 `json:"likes,omitempty"`
 	// The length of package for this single item, the unit is CM
-	PackageLength int32 `json:"package_length,omitempty"`
+	PackageLength float64 `json:"package_length,omitempty"`
 	// The width of package for this single item, the unit is CM
-	PackageWidth int32 `json:"package_width,omitempty"`
+	PackageWidth float64 `json:"package_width,omitempty"`
 	// The height of package for this single item, the unit is CM
-	PackageHeight int32 `json:"package_height,omitempty"`
+	PackageHeight float64 `json:"package_height,omitempty"`
 	// The guaranteed days to ship orders. For pre-order, please input value from 7 to 30; for non pre-order, please exclude this field and it will default to the respective standard per your shop location.(e.g. 3 for CrossBorder)
 	DaysToShip int32 `json:"days_to_ship,omitempty"`
 	// The rating star scores of this item.
