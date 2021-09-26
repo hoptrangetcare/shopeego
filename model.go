@@ -238,11 +238,11 @@ type AddResponseItem struct {
 	// The current price of the item in the listing currency.If item is in promotion, this value is discount price.
 	Price float64 `json:"price,omitempty"`
 	// The current stock quantity of the item.
-	Stock int `json:"stock,omitempty"`
+	Stock int32 `json:"stock,omitempty"`
 	// Timestamp that indicates the date and time that the item was created.
-	CreateTime int `json:"create_time,omitempty"`
+	CreateTime int32 `json:"create_time,omitempty"`
 	// Timestamp that indicates the last time that there was a change in value of the item, such as price/stock change.
-	UpdateTime int `json:"update_time,omitempty"`
+	UpdateTime int32 `json:"update_time,omitempty"`
 	// the net weight of this item, the unit is KG.
 	Weight float64 `json:"weight,omitempty"`
 	// Could call shopee.item.GetCategories to get category detail.Related to result.categories.category_id.
@@ -258,27 +258,27 @@ type AddResponseItem struct {
 	// The wholesales tier list.
 	Wholesales []AddResponseItemWholesale `json:"wholesales,omitempty"`
 	// The sales volume of item.
-	Sales int `json:"sales,omitempty"`
+	Sales int32 `json:"sales,omitempty"`
 	// The page view of item.
-	Views int `json:"views,omitempty"`
+	Views int32 `json:"views,omitempty"`
 	// The conllection number of item.
-	Likes int `json:"likes,omitempty"`
+	Likes int32 `json:"likes,omitempty"`
 	// The length of package for this single item, the unit is CM
-	PackageLength int64 `json:"package_length,omitempty"`
+	PackageLength int32 `json:"package_length,omitempty"`
 	// The width of package for this single item, the unit is CM
-	PackageWidth int64 `json:"package_width,omitempty"`
+	PackageWidth int32 `json:"package_width,omitempty"`
 	// The height of package for this single item, the unit is CM
-	PackageHeight int64 `json:"package_height,omitempty"`
+	PackageHeight int32 `json:"package_height,omitempty"`
 	// The guaranteed days to ship orders. For pre-order, please input value from 7 to 30; for non pre-order, please exclude this field and it will default to the respective standard per your shop location.(e.g. 3 for CrossBorder)
-	DaysToShip int `json:"days_to_ship,omitempty"`
+	DaysToShip int32 `json:"days_to_ship,omitempty"`
 	// The rating star scores of this item.
 	RatingStar float64 `json:"rating_star,omitempty"`
 	// Count of comments for the item.
-	CMTCount int `json:"cmt_count,omitempty"`
+	CMTCount int32 `json:"cmt_count,omitempty"`
 	// This indicates whether the item is secondhand.
 	Condition string `json:"condition,omitempty"`
 	// The ID of discount activity the item is currently in. One item can only have one discount at a time. discount_id will be 0 if the item has no discount applied, or item has variation.
-	DiscountID int64 `json:"discount_id,omitempty"`
+	DiscountID int32 `json:"discount_id,omitempty"`
 	// Use this field to identify whether the item is pre-order. Applicable value: true/false.
 	IsPreOrder bool `json:"is_pre_order,omitempty"`
 }
